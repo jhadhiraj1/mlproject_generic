@@ -20,3 +20,11 @@ class CustomException(Exception):
 
 
 
+if __name__=="main":
+    try:
+        a=1/0
+    except Exception as e:
+        logging.info("Zero Divison Error")
+        print("Error")
+        raise CustomException(e,sys)
+                     
